@@ -1,7 +1,11 @@
-import { Stack, Slot } from "expo-router";
+import "@/global.css";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
+import { Stack, Slot, Tabs } from "expo-router";
 
 export default function RootLayout() {
     return (
-        <Slot />
+        <GluestackUIProvider>
+            <Stack />
+        </GluestackUIProvider>
     );
 }   

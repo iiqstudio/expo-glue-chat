@@ -1,9 +1,12 @@
-import { View, Text } from "react-native";
+import { Box } from "@/components/ui/box";
+import { Button, ButtonText } from "@/components/ui/button";
 
 export default function HomeScreen() {
     return (
-        <View>
-            <Text style={{ fontSize: 30 }}>Home screen!</Text>
-        </View>
+        <Box>
+            <Button variant="solid" action="positive">
+                <ButtonText>Home screen!</ButtonText>
+            </Button>
+        </Box>
     )
 }
