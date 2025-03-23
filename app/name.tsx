@@ -10,7 +10,7 @@ import Header from "./shared/ui/Header";
 export default function NameScreen() {
     return (
         <Box className="flex-1">
-            <Header />
+            <Header progress={10} />
             <Card className="flex-1 bg-background-biscuit">
                 <Box className="flex-1 justify-between">
                     <Box>
@@ -20,7 +20,7 @@ export default function NameScreen() {
                             <InputField placeholder="Enter your name..." />
                         </Input>
                     </Box>
-                    <PrimaryButton onPress={() => router.push("/cart")}>
+                    <PrimaryButton onPress={() => router.push("/lang-select")}>
                         Continue
                     </PrimaryButton>
                 </Box>

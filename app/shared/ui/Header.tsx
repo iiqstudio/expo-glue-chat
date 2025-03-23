@@ -5,7 +5,11 @@ import { Progress, ProgressFilledTrack } from "@/components/ui/progress";
 import { Pressable } from "react-native";
 import { useRouter } from "expo-router";
 
-export default function Header() {
+interface Props {
+    progress: number
+}
+
+export default function Header({ progress }: Props) {
     const router = useRouter();
 
     return (
@@ -27,7 +31,7 @@ export default function Header() {
 
                 <Box className="flex-1 ml-4">
                     <Progress
-                        value={20}
+                        value={progress}
                         size="md"
                         orientation="horizontal"
                         className="bg-background-0"

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "just starting - a1",
+        "text": "I can say “hello” and introduce myself… but full sentences? Naah"
+    },
+    {
+        "id": 2,
+        "title": "beginner - a2",
+        "text": "I can order food, ask for directions, and maybe survive a trip abroad"
+    },
+    {
+        "id": 3,
+        "title": "intermediate",
+        "text": "I can chat with locals and book a hotel without awkward silences",
+        "badge": "B1"
+    },
+    {
+        "id": 4,
+        "title": "upper intermediate",
+        "text": "I can hold a conversation about work, hobbies, and life… with only a few “uhhh” moments",
+        "badge": "B2"
+    },
+    {
+        "id": 5,
+        "title": "advanced ",
+        "text": "I chat easily about deep topics, crack jokes, and even binge-watch TV shows without subtitles!",
+        "badge": "C2"
+    }
+]
