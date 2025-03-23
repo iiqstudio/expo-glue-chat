@@ -1,19 +1,11 @@
 import { Box } from "@/components/ui/box";
-import { Text } from "@/components/ui/text";
 import { Button, ButtonText } from "@/components/ui/button";
-import { Icon, ChevronLeftIcon } from "@/components/ui/icon";
-import { Progress, ProgressFilledTrack } from "@/components/ui/progress";
-import { Input, InputField } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
-import Header from "./shared/ui/Header";
-import { useRouter } from "expo-router";
-import PrimaryButton from "./shared/ui/PrimaryButton";
-import Subtitle from "./shared/ui/Subtitle";
-import Title from "./shared/ui/Title";
+import { Center } from "@/components/ui/center";
 import { Heading } from "@/components/ui/heading";
+import { useRouter } from "expo-router";
 
 
-export default function HomeScreen() {
+export default function WelcomeToAiScreen() {
     const router = useRouter();
 
     return (
@@ -28,7 +20,6 @@ export default function HomeScreen() {
                     <Button
                         size="lg"
                         className="w-full rounded-lg bg-background-red"
-                        onPress={() => router.push('/name')}
                     >
                         <ButtonText className="font-semibold">🔥 Let’s start</ButtonText>
                     </Button>
