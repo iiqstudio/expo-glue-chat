@@ -9,11 +9,14 @@
     "web": "DARK_MODE=media expo start --web"
   },
   "dependencies": {
+    "@expo/html-elements": "^0.4.2",
     "@expo/metro-config": "^0.19.12",
     "@gluestack-ui/button": "^1.0.14",
     "@gluestack-ui/icon": "^0.1.26",
+    "@gluestack-ui/input": "^0.1.38",
     "@gluestack-ui/nativewind-utils": "^1.0.26",
     "@gluestack-ui/overlay": "^0.1.22",
+    "@gluestack-ui/progress": "^0.1.18",
     "@gluestack-ui/toast": "^1.0.9",
     "expo": "~52.0.40",
     "expo-constants": "~17.0.8",
