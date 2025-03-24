@@ -13,9 +13,9 @@ export default function Header({ progress }: Props) {
     const router = useRouter();
 
     return (
-        <Box className="mb-10">
+        <Box className="mb-10 mt-10">
             <Box className="flex-row items-center justify-between pr-4">
-                <Box className="flex-row items-center cursor-pointer">
+                {/* <Box className="flex-row items-center cursor-pointer">
                     <Icon
                         as={ChevronLeftIcon}
                         className="text-typography-500 m-2 w-4 h-4"
@@ -27,7 +27,7 @@ export default function Header({ progress }: Props) {
                     >
                         <Text className="text-sm font-medium leading-[14px]">Back</Text>
                     </Pressable>
-                </Box>
+                </Box> */}
 
                 <Box className="flex-1 ml-4">
                     <Progress

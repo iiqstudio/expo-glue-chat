@@ -4,24 +4,37 @@ import Subtitle from "@/app/shared/ui/Subtitle";
 import Title from "@/app/shared/ui/Title";
 import { Box } from "@/components/ui/box";
 import { Text } from "@/components/ui/text";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UniversalList from "./shared/ui/UniversalList";
 import countryFlags from './shared/lib/data/countries.json';
 import { Card } from "@/components/ui/card";
 import { Input, InputField } from "@/components/ui/input";
-import { router, useRouter } from "expo-router";
+import { router, useNavigation, useRouter } from "expo-router";
 import PrimaryButton from "./shared/ui/PrimaryButton";
 import { VStack } from "@/components/ui/vstack";
 import { Pressable, SafeAreaView } from "react-native";
 
 export default function LangSelectScreen() {
     const [selectedId, setSelectedId] = useState<number | null>(null);
-    const router = useRouter(); // Инициализируем хук для навигации
+    const router = useRouter();
+    const navigation = useNavigation();
 
     const handleSelect = (id: number) => {
         setSelectedId(id);
-        router.push("chat");
+        router.push("age");
     };
+
+    useEffect(() => {
+        navigation.setOptions({
+            headerShown: true,
+            title: "",
+            headerStyle: {
+                backgroundColor: '#FFFAF3',
+            },
+            headerTintColor: '#262627',
+            headerBackTitle: 'Back'
+        });
+    }, [navigation]);
 
     return (
         <SafeAreaView className="flex-1 bg-background-biscuit">

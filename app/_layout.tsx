@@ -6,14 +6,12 @@ import { SafeAreaView } from "react-native";
 export default function RootLayout() {
     return (
         <GluestackUIProvider>
-
             <Stack
                 screenOptions={{
-                    headerShown: false, // Убираем header для всех экранов
+                    headerShown: false,
                 }}
             />
             {/* <Slot /> */}
-
         </GluestackUIProvider>
     );
 }

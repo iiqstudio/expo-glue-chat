@@ -2,13 +2,29 @@ import { Box } from "@/components/ui/box";
 import { Card } from "@/components/ui/card";
 import { Text } from "@/components/ui/text";
 import { Input, InputField } from "@/components/ui/input";
-import { router } from "expo-router";
+import { router, useNavigation } from "expo-router";
 import PrimaryButton from "./shared/ui/PrimaryButton";
 import Subtitle from "./shared/ui/Subtitle";
 import Title from "./shared/ui/Title";
 import Header from "./shared/ui/Header";
 import { SafeAreaView } from "react-native";
+import { useEffect, useLayoutEffect } from "react";
+
 export default function NameScreen() {
+    const navigation = useNavigation();
+
+    useEffect(() => {
+        navigation.setOptions({
+            headerShown: true,
+            title: "",
+            headerStyle: {
+                backgroundColor: '#FFFAF3',
+            },
+            headerTintColor: '#262627',
+            headerBackTitle: 'Back'
+        });
+    }, [navigation]);
+
     return (
         <SafeAreaView className="flex-1 bg-background-biscuit">
             <Box className="flex-1">
@@ -29,5 +45,5 @@ export default function NameScreen() {
                 </Card>
             </Box>
         </SafeAreaView>
-    )
+    );
 }

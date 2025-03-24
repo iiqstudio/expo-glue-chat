@@ -2,12 +2,14 @@
     {
         "id": 1,
         "title": "just starting - a1",
-        "text": "I can say “hello” and introduce myself… but full sentences? Naah"
+        "text": "I can say “hello” and introduce myself… but full sentences? Naah",
+        "badge": ""
     },
     {
         "id": 2,
         "title": "beginner - a2",
-        "text": "I can order food, ask for directions, and maybe survive a trip abroad"
+        "text": "I can order food, ask for directions, and maybe survive a trip abroad",
+        "badge": ""
     },
     {
         "id": 3,

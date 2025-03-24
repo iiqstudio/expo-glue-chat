@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, Button, StyleSheet, Platform, Alert } from "react-native";
 import { Audio } from "expo-av";
 import Header from "./shared/ui/Header";
+import { useNavigation } from "expo-router";
 
 export default function Chat() {
     const [recording, setRecording] = useState<Audio.Recording | null>(null);
     const [audioUri, setAudioUri] = useState<string | null>(null);
+    const navigation = useNavigation();
 
     // Запрос разрешений
     const requestPermissions = async () => {
@@ -69,6 +71,18 @@ export default function Chat() {
             console.error("Ошибка при воспроизведении:", error);
         }
     };
+
+    useEffect(() => {
+        navigation.setOptions({
+            headerShown: true,
+            title: "",
+            headerStyle: {
+                backgroundColor: '#FFFAF3',
+            },
+            headerTintColor: '#262627',
+            headerBackTitle: 'Back'
+        });
+    }, [navigation]);
 
     return (
         <View style={styles.container}>
