@@ -18,7 +18,7 @@ export default function LangLevelScreen() {
     const handleSelect = (id: number) => {
         setSelectedId(id);
         console.log("Selected level:", id);
-        router.push("/next-screen");
+        router.push("gender");
     };
 
     useEffect(() => {
