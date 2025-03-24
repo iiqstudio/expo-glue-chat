@@ -20,7 +20,7 @@ export default function TopicsSelectScreen() {
             : [...selectedIds, id];
 
         setSelectedIds(newSelectedIds);
-        console.log("Selected IDs:", newSelectedIds); // Логирование выбранных ID
+        router.push("learning-experience");
     };
 
     useEffect(() => {
