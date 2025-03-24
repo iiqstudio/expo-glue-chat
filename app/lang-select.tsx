@@ -9,7 +9,7 @@ import UniversalList from "./shared/ui/UniversalList";
 import countryFlags from './shared/lib/data/countries.json';
 import { Card } from "@/components/ui/card";
 import { Input, InputField } from "@/components/ui/input";
-import { router, useNavigation, useRouter } from "expo-router";
+import { router, useLocalSearchParams, useNavigation, useRouter } from "expo-router";
 import PrimaryButton from "./shared/ui/PrimaryButton";
 import { VStack } from "@/components/ui/vstack";
 import { Pressable, SafeAreaView } from "react-native";
@@ -18,6 +18,7 @@ export default function LangSelectScreen() {
     const [selectedId, setSelectedId] = useState<number | null>(null);
     const router = useRouter();
     const navigation = useNavigation();
+    const { name } = useLocalSearchParams<{ name: string }>();
 
     const handleSelect = (id: number) => {
         setSelectedId(id);
@@ -43,7 +44,7 @@ export default function LangSelectScreen() {
                 <Card className="flex-1 bg-background-biscuit">
                     <Box className="flex-1 justify-between">
                         <Box className="mb-4">
-                            <Title>Username, which language do you want to learn?</Title>
+                            <Title>{name}, which language do you want to learn?</Title>
                             <Subtitle mb="6">Select a language</Subtitle>
                         </Box>
 
