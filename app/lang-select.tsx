@@ -5,12 +5,9 @@ import Title from "@/app/shared/ui/Title";
 import { Box } from "@/components/ui/box";
 import { Text } from "@/components/ui/text";
 import { useEffect, useState } from "react";
-import UniversalList from "./shared/ui/UniversalList";
 import countryFlags from './shared/lib/data/countries.json';
 import { Card } from "@/components/ui/card";
-import { Input, InputField } from "@/components/ui/input";
-import { router, useLocalSearchParams, useNavigation, useRouter } from "expo-router";
-import PrimaryButton from "./shared/ui/PrimaryButton";
+import { useLocalSearchParams, useNavigation, useRouter } from "expo-router";
 import { VStack } from "@/components/ui/vstack";
 import { Pressable, SafeAreaView } from "react-native";
 

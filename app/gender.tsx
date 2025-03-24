@@ -3,7 +3,7 @@ import Title from "@/app/shared/ui/Title";
 import { Box } from "@/components/ui/box";
 import { Text } from "@/components/ui/text";
 import UniversalList from "@/app/shared/ui/UniversalList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Pressable, SafeAreaView } from "react-native";
 import { Card } from "@/components/ui/card";
 import { VStack } from "@/components/ui/vstack";
@@ -25,6 +25,19 @@ export default function GenderSelectScreen() {
         setSelectedId(id);
         router.push("topics");
     };
+
+
+    useEffect(() => {
+        navigation.setOptions({
+            headerShown: true,
+            title: "",
+            headerStyle: {
+                backgroundColor: '#FFFAF3',
+            },
+            headerTintColor: '#262627',
+            headerBackTitle: 'Back'
+        });
+    }, [navigation]);
 
     return (
         <SafeAreaView className="flex-1 bg-background-biscuit">
