@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Pressable, SafeAreaView } from "react-native";
 import { Card } from "@/components/ui/card";
 import { VStack } from "@/components/ui/vstack";
+import { useRouter, useNavigation } from "expo-router";
 
 const gendersData = [
     { id: 1, gender: 'Male', smile: '👨' },
@@ -17,9 +18,12 @@ const gendersData = [
 
 export default function GenderSelectScreen() {
     const [selectedId, setSelectedId] = useState<number | null>(null);
+    const router = useRouter();
+    const navigation = useNavigation();
 
     const handleSelect = (id: number) => {
         setSelectedId(id);
+        router.push("topics");
     };
 
     return (

@@ -31,9 +31,9 @@ export default function UniversalTopicsList<T extends WithId>({
     };
 
     return (
-        <div className="flex flex-wrap gap-2">
+        <Box className="flex flex-wrap gap-2">
             {data.map((item) => (
-                <div
+                <Box
                     key={item.id}
                     onClick={() => handleSelect(item.id)}
                 >
@@ -45,8 +45,8 @@ export default function UniversalTopicsList<T extends WithId>({
                         <Text className="mr-1">{item.emoji}</Text>
                         <Text>{item.name}</Text>
                     </Box>
-                </div>
+                </Box>
             ))}
-        </div>
+        </Box>
     );
 }
