@@ -1,6 +1,5 @@
 import { Box } from "@/components/ui/box";
-import { Card } from "@/components/ui/card";
-import { Text } from "@/components/ui/text";
+import { Card } from "@/components/ui/card";;
 import { Input, InputField } from "@/components/ui/input";
 import { router, useNavigation } from "expo-router";
 import PrimaryButton from "./shared/ui/PrimaryButton";
@@ -8,7 +7,7 @@ import Subtitle from "./shared/ui/Subtitle";
 import Title from "./shared/ui/Title";
 import Header from "./shared/ui/Header";
 import { SafeAreaView } from "react-native";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 export default function NameScreen() {
     const navigation = useNavigation();

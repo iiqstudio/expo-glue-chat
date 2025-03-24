@@ -6,7 +6,7 @@ import cardData from '../app/shared/lib/data/langlevel.json';
 import { Pressable, SafeAreaView } from "react-native";
 import { Heading } from "@/components/ui/heading";
 import { VStack } from "@/components/ui/vstack";
-import { router, useNavigation, useRouter } from "expo-router";
+import { useNavigation, useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import Header from "./shared/ui/Header";
 
