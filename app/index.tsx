@@ -17,8 +17,6 @@ import WelcomeToAiScreen from "./welcome";
 
 
 export default function HomeScreen() {
-    const router = useRouter();
-
     return (
         <WelcomeToAiScreen />
     )
