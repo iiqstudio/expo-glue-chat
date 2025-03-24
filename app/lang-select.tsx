@@ -20,7 +20,7 @@ export default function LangSelectScreen() {
 
     const handleSelect = (id: number) => {
         setSelectedId(id);
-        router.push("chat"); // Переход на маршрут "chat"
+        router.push("chat");
     };
 
     return (

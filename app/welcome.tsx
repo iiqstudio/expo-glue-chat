@@ -1,15 +1,16 @@
 import { Box } from "@/components/ui/box";
 import { Button, ButtonText } from "@/components/ui/button";
-import { Center } from "@/components/ui/center";
+import { Image } from "@/components/ui/image";
 import { Heading } from "@/components/ui/heading";
 import { useRouter } from "expo-router";
+import { SafeAreaView } from "react-native";
 
 
 export default function WelcomeToAiScreen() {
     const router = useRouter();
 
     return (
-        <Box className="flex-1 flex-col justify-between bg-background-darkblue pt-14">
+        <SafeAreaView className="flex-1 flex-col justify-between bg-background-darkblue pt-14">
             <Box className="px-7">
                 <Box className="mb-16">
                     <Heading size="4xl" className="text-typography-0 font-bold leading-[58px] tracking-[0.2px]">Welcome to AI Tutor!</Heading>
@@ -20,8 +21,9 @@ export default function WelcomeToAiScreen() {
                     <Button
                         size="lg"
                         className="w-full rounded-lg bg-background-red"
+                        onPress={() => router.push('/name')}
                     >
-                        <ButtonText className="font-semibold">🔥 Let’s start</ButtonText>
+                        <ButtonText className="font-semibold">🔥 Let’s start!!!</ButtonText>
                     </Button>
 
                     <Button
@@ -36,9 +38,14 @@ export default function WelcomeToAiScreen() {
                 </Box>
             </Box>
             <Box className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-background-indigo rounded-full blur-3xl opacity-70 z-0"></Box>
-            <Box>
-                <Image src={peopleImg} alt="people" />
+            <Box className="flex items-center justify-center w-full">
+                <Image
+                    source={require("../assets/welcome.png")}
+                    alt="welcome"
+                    size="full"
+                    resizeMode="contain"
+                />
             </Box>
-        </Box>
+        </SafeAreaView>
     )
 }
