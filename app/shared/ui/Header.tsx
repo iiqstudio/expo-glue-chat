@@ -6,7 +6,7 @@ import { Pressable } from "react-native";
 import { useRouter } from "expo-router";
 
 interface Props {
-    progress: number
+    progress?: number
 }
 
 export default function Header({ progress }: Props) {

@@ -37,7 +37,7 @@ export default function WelcomeToAiScreen() {
             </Box>
             <Box className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-background-indigo rounded-full blur-3xl opacity-70 z-0"></Box>
             <Box>
-                {/* <Image src={peopleImg} alt="people" /> */}
+                <Image src={peopleImg} alt="people" />
             </Box>
         </Box>
     )
